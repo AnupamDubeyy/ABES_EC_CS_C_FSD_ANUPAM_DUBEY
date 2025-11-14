@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
+import './App.css'
 const Header = () => {
   return (
-    <div className="header">Header</div>
+    <div className="header">E-Commerce Store</div>
   )
 }
 const Search = ({ filterHandler }) => {
