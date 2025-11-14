@@ -1,4 +1,5 @@
 import { useState } from "react"
+import "./App.css"
 import InputToDo from "./Components/InputToDo"
 function App() {
   const [todoList, setTodoList] = useState([]);
@@ -11,6 +12,12 @@ function App() {
     setTodoList([...newList]);
   }
   const updateHandler = (index, data) => {
+    const newData = prompt("Update your todo", data);
+    if (newData !== null && newData.trim() !== "") {
+      const newList = [...todoList];
+      newList[index] = newData;
+      setTodoList([...newList]);
+    }
 
   }
   return (
